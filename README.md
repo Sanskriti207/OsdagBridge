@@ -1,4 +1,7 @@
-# OsdagBridge
+# Osdag Bridge
+## Overview
+This repository contains the source code for Osdag bridge component of [Osdag](https://github.com/osdag-admin/Osdag).
+## Technical Stack
 
 OsdagBridge is a modular, shared-core software plugin for the analysis and design of steel bridges within the Osdag ecosystem.  
 It supports desktop (PySide6), web (Django + React), and CLI interfaces through a unified Python core.
@@ -72,104 +75,40 @@ OsdagBridge/
         ├── desktop/           # PySide6 GUI
         └── web/               # Django + React web stack
 ```
-
----
-
 ## Installation
 
-Clone the repository:
+### Prerequisites
+- Python 3.8 or higher
+- pip package manager
 
+### Setup
+
+1. Clone the repository:
 ```bash
-git clone https://github.com/osdag-admin/OsdagBridge.git
-cd OsdagBridge
+git clone https://github.com/garvit000/osdag_bridge.git
+cd osdag_bridge
 ```
 
-Install in editable mode:
-
+2. Install dependencies:
 ```bash
-pip install -e .
+pip install -r requirements.txt
 ```
 
----
-
+### Dependencies
+```
+PySide6>=6.5.0
+```
 ## Usage
 
-### Command-Line Interface
+### Running the Application
 
-Run an analysis:
-
+From the project root directory:
 ```bash
-osdagbridge analyze project.yaml --solver native
+python src/osbridge/template_page.py
 ```
 
-Generate a report:
-
+Or from within the osbridge directory:
 ```bash
-osdagbridge report project.yaml report.pdf
+cd src/osbridge
+python template_page.py
 ```
-
-### Desktop Application
-
-```bash
-python -m osdagbridge.desktop
-```
-
-### Web Application
-
-Backend:
-
-```bash
-python src/osdagbridge/web/backend/manage.py runserver
-```
-
-Frontend:
-
-```bash
-cd src/osdagbridge/web/frontend
-npm install
-npm start
-```
-
----
-
-## Testing
-
-Run the complete test suite:
-
-```bash
-pytest -q
-```
-
-Continuous integration runs automatically through GitHub Actions (`.github/workflows/ci.yml`).
-
----
-
-## Development Guidelines
-
-### Key Code Locations
-- Core logic: `src/osdagbridge/core/`
-- Codes & standards: `src/osdagbridge/core/utils/codes/`
-- Bridge types: `src/osdagbridge/bridge_types/`
-- Components: `src/osdagbridge/bridge_components/`
-- CLI: `src/osdagbridge/cli/`
-- Desktop GUI: `src/osdagbridge/desktop/`
-- Web backend/frontend: `src/osdagbridge/web/`
-
-### Contribution Workflow
-1. Fork the repository  
-2. Create a feature branch  
-3. Ensure all tests pass (`pytest`)  
-4. Submit a pull request
-
----
-
-## Acknowledgements
-
-OsdagBridge is part of the Osdag project, promoting open-source tools for steel design education, research, and practice.
-
----
-
-## License
-
-This project is licensed under the MIT License.  
-See the `LICENSE` file for full details.
