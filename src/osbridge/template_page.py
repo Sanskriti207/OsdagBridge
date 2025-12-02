@@ -8,14 +8,23 @@ from PySide6.QtWidgets import (
     QMenuBar,
     QSplitter,
     QSizePolicy,
+    QPushButton,
+    QCheckBox,
+    QScrollArea,
+    QFrame,
 )
+from PySide6.QtCore import Qt
+
+#from input_dock import InputDock, NoScrollComboBox, apply_field_style
+#from backend import BackendOsBridge
+#from common import *
 from PySide6.QtCore import Qt, QFile, QTextStream
 from PySide6.QtGui import QIcon
 
 # Import resources to register them
 from osbridge.resources import resources_rc
 
-from osbridge.ui.input_dock import InputDock
+from osbridge.ui.input_dock import InputDock, NoScrollComboBox, apply_field_style
 from osbridge.ui.output_dock import OutputDock
 from osbridge.backend.backend import BackendOsBridge
 from osbridge.backend.common import *
