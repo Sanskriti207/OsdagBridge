@@ -1,2 +1,2 @@
-"""OsdagBridge package root."""
-from ._version import __version__
+"""osdagbridge package."""
+__version__ = "0.0.0"
